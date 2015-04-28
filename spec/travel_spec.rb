@@ -13,3 +13,11 @@ describe(".all") do
     expect(Travel.all()).to(eq([]))
   end
 end
+
+describe("#save") do
+  it("adds a destination to the array of saved travel locations") do
+    test_travel = Travel.new("Chicago")
+    test_travel.save()
+    expect(Travel.all()).to(eq([test_travel]))
+  end
+end
