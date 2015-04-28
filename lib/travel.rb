@@ -1,5 +1,7 @@
 class Travel
-  @@all_destinations = []
+  define_singleton_method(:clear) do
+    @@all_destinations = []
+  end  
 
   define_method(:initialize) do |description|
     @description = description
@@ -15,5 +17,6 @@ class Travel
 
   define_method(:save) do
     @@all_destinations.push(self)
-  end  
+  end
+
 end
