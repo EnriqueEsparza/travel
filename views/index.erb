@@ -1,0 +1,18 @@
+<h1>Vacation</h1
+  <p>Where have you traveled?</p>
+
+  <ul>
+    <% @destinations.each() do |destination| %>
+    <li><%= destination.description() %></li>
+    <% end %>
+  </ul>
+
+  <p>Add new destination:</p>
+
+  <form action="/results" method="post">
+    <div class="form-group">
+      <label for="destination">Travel Destinations</label>
+      <input id="destination" name="destination" class="form-control" type="text">
+  </div>
+    <button type="submit">Add Travel Destination</button>
+  </form>
