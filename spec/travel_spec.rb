@@ -7,3 +7,9 @@ describe("#description") do
     expect(test_travel.description()).to(eq("San Francisco"))
   end
 end
+
+describe(".all") do
+  it("is empty at first") do
+    expect(Travel.all()).to(eq([]))
+  end
+end
